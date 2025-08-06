@@ -1,0 +1,30 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter original string: ");
+        String original = sc.nextLine();
+
+        System.out.print("Enter character or word to replace: ");
+        String target = sc.nextLine();
+
+        System.out.print("Enter new character or word: ");
+        String replacement = sc.nextLine();
+
+        String updated = original.replace(target, replacement);
+
+        System.out.println("\nOriginal string: " + original);
+        System.out.println("Updated string : " + updated);
+    }
+}
+
+OUTPUT:
+Enter original string: meenu is my best friend
+Enter character or word to replace: best
+Enter new character or word: close
+
+Original string: meenu is my best friend
+Updated string : meenu is my close friend
