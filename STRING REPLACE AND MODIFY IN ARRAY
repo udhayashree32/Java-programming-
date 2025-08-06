@@ -1,0 +1,42 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class ReplaceLetterOnly {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
+        System.out.print("Enter letter to replace: ");
+        char oldLetter = sc.nextLine().charAt(0);
+
+        System.out.print("Enter new letter: ");
+        char newLetter = sc.nextLine().charAt(0);
+
+       
+        if (!Character.isLetter(oldLetter) || !Character.isLetter(newLetter)) {
+            System.out.println("Please enter valid letters only.");
+            return;
+        }
+
+        
+        StringBuilder modified = new StringBuilder();
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (ch == oldLetter) {
+                modified.append(newLetter);
+            } else {
+                modified.append(ch);
+            }
+        }
+
+        System.out.println("Modified string: " + modified.toString());
+    }
+}
+OUTPUT:
+Enter a string: apple
+Enter letter to replace: p
+Enter new letter: s
+Modified string: assle
+
