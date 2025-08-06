@@ -1,0 +1,105 @@
+JAVA PROGRAM : 
+
+import java.util.Scanner; 
+
+public class PersonalInfoAllDataTypes { 
+
+    public static void main(String[] args) { 
+
+        Scanner sc = new Scanner(System.in); 
+
+        System.out.print("Enter your name initial (character): "); 
+
+        char nameInitial = sc.next().charAt(0); 
+
+        System.out.print("Enter your age (byte): "); 
+
+        byte age = sc.nextByte(); 
+
+        System.out.print("Enter your height in cm (short): "); 
+
+        short height = sc.nextShort(); 
+
+        System.out.print("Enter your mobile number (long): "); 
+
+        long mobileNumber = sc.nextLong();   
+
+        System.out.print("Enter your salary (long): "); 
+
+        long salary = sc.nextLong(); 
+
+        System.out.print("Enter your weight (float): "); 
+
+        float weight = sc.nextFloat(); 
+
+        System.out.print("Enter your percentage (double): "); 
+
+        double percentage = sc.nextDouble(); 
+
+        System.out.print("Are you a student? (true/false): "); 
+
+        boolean isStudent = sc.nextBoolean(); 
+
+        System.out.println("\n=== Personal Info ==="); 
+
+        System.out.println("Name Initial: " + nameInitial); 
+
+        System.out.println("Age: " + age); 
+
+        System.out.println("Height: " + height + " cm"); 
+
+        System.out.println("Mobile Number: " + mobileNumber); 
+
+        System.out.println("Salary: " + salary); 
+
+        System.out.println("Weight: " + weight + " kg"); 
+
+        System.out.println("Percentage: " + percentage + "%"); 
+
+        System.out.println("Is Student: " + isStudent); 
+
+    } 
+
+} 
+
+OUTPUT: 
+
+Enter your name: udhaya 
+
+Enter your age (byte): 19 
+
+Enter your height in cm (short): 134 
+
+Enter your mobile number (long): 6789 
+
+Enter your salary (long): 8976 
+
+Enter your weight (float): 6789 
+
+Enter your percentage (double): 43 
+
+Are you a student? (true/false): false 
+
+ 
+
+=== Personal Info === 
+
+Name Initial: u 
+
+Age: 19 
+
+Height: 134 cm 
+
+Mobile Number: 6789 
+
+Salary: 8976 
+
+Weight: 6789.0 kg 
+
+Percentage: 43.0% 
+
+Is Student: false 
+
+ 
+
+=== Code Execution Successful ===  
