@@ -1,0 +1,24 @@
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 2; i -= 2) {
+            System.out.print(i + " ");
+        }
+    }
+}
+OUTPUT:
+10 8 6 4 2
+
+
+PROGRAM:
+public class Main {
+  
+    public static void main(String[] args) {
+        for (int i = 2; i <= 10; i += 2) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+OUTPUT:
+2 4 6 8 10
