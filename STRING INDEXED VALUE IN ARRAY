@@ -1,0 +1,24 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class NameCharacterAccess {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Characters at each index:");
+        for (int i = 0; i < name.length(); i++) {
+            System.out.println("Index " + i + ": " + name.charAt(i));
+        }
+    }
+}
+OUTPUT:
+Enter your name: shree
+Characters at each index:
+Index 0: s
+Index 1: h
+Index 2: r
+Index 3: e
+Index 4: e
+
