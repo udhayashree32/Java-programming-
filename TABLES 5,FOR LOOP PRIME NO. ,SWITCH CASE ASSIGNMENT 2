@@ -1,0 +1,1121 @@
+ JAVA PROGRAM:
+import java.util.Scanner;
+
+public class AreaCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose a shape to calculate area:");
+        System.out.println("1. Circle");
+        System.out.println("2. Square");
+        System.out.println("3. Triangle");
+        System.out.println("4. Rectangle");
+        System.out.print("Enter your choice (1-4): ");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.print("Enter radius of the circle: ");
+                double radius = sc.nextDouble();
+                double areaCircle = Math.PI * radius * radius;
+                System.out.println("Area of Circle: " + areaCircle);
+                break;
+
+            case 2:
+                System.out.print("Enter side of the square: ");
+                double side = sc.nextDouble();
+                double areaSquare = side * side;
+                System.out.println("Area of Square: " + areaSquare);
+                break;
+
+            case 3:
+                System.out.print("Enter base of the triangle: ");
+                double base = sc.nextDouble();
+                System.out.print("Enter height of the triangle: ");
+                double height = sc.nextDouble();
+                double areaTriangle = 0.5 * base * height;
+                System.out.println("Area of Triangle: " + areaTriangle);
+                break;
+
+            case 4:
+                System.out.print("Enter length of the rectangle: ");
+                double length = sc.nextDouble();
+                System.out.print("Enter breadth of the rectangle: ");
+                double breadth = sc.nextDouble();
+                double areaRectangle = length * breadth;
+                System.out.println("Area of Rectangle: " + areaRectangle);
+                break;
+
+            default:
+                System.out.println("Invalid choice. Please enter 1 to 4.");
+        }
+
+        sc.close();
+    }
+OUTPUT:
+Choose a shape to calculate area:
+1. Circle
+2. Square
+3. Triangle
+4. Rectangle
+Enter your choice (1-4): 3
+Enter base of the triangle: 10
+Enter height of the triangle: 5
+Area of Triangle: 25.0
+
+JAVA PROGRAM:
+public class PrimeCheckRange {
+    public static void main(String[] args) {
+        System.out.println("Prime number check from 0 to 1000:\n");
+
+        for (int num = 0; num <= 1000; num++) {
+            if (isPrime(num)) {
+                System.out.println(num + " is a Prime Number");
+            } else {
+                System.out.println(num + " is Not a Prime Number");
+            }
+        }
+    }
+
+    // Function to check prime
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false; // 0 and 1 are not prime
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+}
+
+OUTPUT:
+Prime number check from 0 to 1000:
+
+0 is Not a Prime Number
+1 is Not a Prime Number
+2 is a Prime Number
+3 is a Prime Number
+4 is Not a Prime Number
+5 is a Prime Number
+6 is Not a Prime Number
+7 is a Prime Number
+8 is Not a Prime Number
+9 is Not a Prime Number
+10 is Not a Prime Number
+11 is a Prime Number
+12 is Not a Prime Number
+13 is a Prime Number
+14 is Not a Prime Number
+15 is Not a Prime Number
+16 is Not a Prime Number
+17 is a Prime Number
+18 is Not a Prime Number
+19 is a Prime Number
+20 is Not a Prime Number
+21 is Not a Prime Number
+22 is Not a Prime Number
+23 is a Prime Number
+24 is Not a Prime Number
+25 is Not a Prime Number
+26 is Not a Prime Number
+27 is Not a Prime Number
+28 is Not a Prime Number
+29 is a Prime Number
+30 is Not a Prime Number
+31 is a Prime Number
+32 is Not a Prime Number
+33 is Not a Prime Number
+34 is Not a Prime Number
+35 is Not a Prime Number
+36 is Not a Prime Number
+37 is a Prime Number
+38 is Not a Prime Number
+39 is Not a Prime Number
+40 is Not a Prime Number
+41 is a Prime Number
+42 is Not a Prime Number
+43 is a Prime Number
+44 is Not a Prime Number
+45 is Not a Prime Number
+46 is Not a Prime Number
+47 is a Prime Number
+48 is Not a Prime Number
+49 is Not a Prime Number
+50 is Not a Prime Number
+51 is Not a Prime Number
+52 is Not a Prime Number
+53 is a Prime Number
+54 is Not a Prime Number
+55 is Not a Prime Number
+56 is Not a Prime Number
+57 is Not a Prime Number
+58 is Not a Prime Number
+59 is a Prime Number
+60 is Not a Prime Number
+61 is a Prime Number
+62 is Not a Prime Number
+63 is Not a Prime Number
+64 is Not a Prime Number
+65 is Not a Prime Number
+66 is Not a Prime Number
+67 is a Prime Number
+68 is Not a Prime Number
+69 is Not a Prime Number
+70 is Not a Prime Number
+71 is a Prime Number
+72 is Not a Prime Number
+73 is a Prime Number
+74 is Not a Prime Number
+75 is Not a Prime Number
+76 is Not a Prime Number
+77 is Not a Prime Number
+78 is Not a Prime Number
+79 is a Prime Number
+80 is Not a Prime Number
+81 is Not a Prime Number
+82 is Not a Prime Number
+83 is a Prime Number
+84 is Not a Prime Number
+85 is Not a Prime Number
+86 is Not a Prime Number
+87 is Not a Prime Number
+88 is Not a Prime Number
+89 is a Prime Number
+90 is Not a Prime Number
+91 is Not a Prime Number
+92 is Not a Prime Number
+93 is Not a Prime Number
+94 is Not a Prime Number
+95 is Not a Prime Number
+96 is Not a Prime Number
+97 is a Prime Number
+98 is Not a Prime Number
+99 is Not a Prime Number
+100 is Not a Prime Number
+101 is a Prime Number
+102 is Not a Prime Number
+103 is a Prime Number
+104 is Not a Prime Number
+105 is Not a Prime Number
+106 is Not a Prime Number
+107 is a Prime Number
+108 is Not a Prime Number
+109 is a Prime Number
+110 is Not a Prime Number
+111 is Not a Prime Number
+112 is Not a Prime Number
+113 is a Prime Number
+114 is Not a Prime Number
+115 is Not a Prime Number
+116 is Not a Prime Number
+117 is Not a Prime Number
+118 is Not a Prime Number
+119 is Not a Prime Number
+120 is Not a Prime Number
+121 is Not a Prime Number
+122 is Not a Prime Number
+123 is Not a Prime Number
+124 is Not a Prime Number
+125 is Not a Prime Number
+126 is Not a Prime Number
+127 is a Prime Number
+128 is Not a Prime Number
+129 is Not a Prime Number
+130 is Not a Prime Number
+131 is a Prime Number
+132 is Not a Prime Number
+133 is Not a Prime Number
+134 is Not a Prime Number
+135 is Not a Prime Number
+136 is Not a Prime Number
+137 is a Prime Number
+138 is Not a Prime Number
+139 is a Prime Number
+140 is Not a Prime Number
+141 is Not a Prime Number
+142 is Not a Prime Number
+143 is Not a Prime Number
+144 is Not a Prime Number
+145 is Not a Prime Number
+146 is Not a Prime Number
+147 is Not a Prime Number
+148 is Not a Prime Number
+149 is a Prime Number
+150 is Not a Prime Number
+151 is a Prime Number
+152 is Not a Prime Number
+153 is Not a Prime Number
+154 is Not a Prime Number
+155 is Not a Prime Number
+156 is Not a Prime Number
+157 is a Prime Number
+158 is Not a Prime Number
+159 is Not a Prime Number
+160 is Not a Prime Number
+161 is Not a Prime Number
+162 is Not a Prime Number
+163 is a Prime Number
+164 is Not a Prime Number
+165 is Not a Prime Number
+166 is Not a Prime Number
+167 is a Prime Number
+168 is Not a Prime Number
+169 is Not a Prime Number
+170 is Not a Prime Number
+171 is Not a Prime Number
+172 is Not a Prime Number
+173 is a Prime Number
+174 is Not a Prime Number
+175 is Not a Prime Number
+176 is Not a Prime Number
+177 is Not a Prime Number
+178 is Not a Prime Number
+179 is a Prime Number
+180 is Not a Prime Number
+181 is a Prime Number
+182 is Not a Prime Number
+183 is Not a Prime Number
+184 is Not a Prime Number
+185 is Not a Prime Number
+186 is Not a Prime Number
+187 is Not a Prime Number
+188 is Not a Prime Number
+189 is Not a Prime Number
+190 is Not a Prime Number
+191 is a Prime Number
+192 is Not a Prime Number
+193 is a Prime Number
+194 is Not a Prime Number
+195 is Not a Prime Number
+196 is Not a Prime Number
+197 is a Prime Number
+198 is Not a Prime Number
+199 is a Prime Number
+200 is Not a Prime Number
+201 is Not a Prime Number
+202 is Not a Prime Number
+203 is Not a Prime Number
+204 is Not a Prime Number
+205 is Not a Prime Number
+206 is Not a Prime Number
+207 is Not a Prime Number
+208 is Not a Prime Number
+209 is Not a Prime Number
+210 is Not a Prime Number
+211 is a Prime Number
+212 is Not a Prime Number
+213 is Not a Prime Number
+214 is Not a Prime Number
+215 is Not a Prime Number
+216 is Not a Prime Number
+217 is Not a Prime Number
+218 is Not a Prime Number
+219 is Not a Prime Number
+220 is Not a Prime Number
+221 is Not a Prime Number
+222 is Not a Prime Number
+223 is a Prime Number
+224 is Not a Prime Number
+225 is Not a Prime Number
+226 is Not a Prime Number
+227 is a Prime Number
+228 is Not a Prime Number
+229 is a Prime Number
+230 is Not a Prime Number
+231 is Not a Prime Number
+232 is Not a Prime Number
+233 is a Prime Number
+234 is Not a Prime Number
+235 is Not a Prime Number
+236 is Not a Prime Number
+237 is Not a Prime Number
+238 is Not a Prime Number
+239 is a Prime Number
+240 is Not a Prime Number
+241 is a Prime Number
+242 is Not a Prime Number
+243 is Not a Prime Number
+244 is Not a Prime Number
+245 is Not a Prime Number
+246 is Not a Prime Number
+247 is Not a Prime Number
+248 is Not a Prime Number
+249 is Not a Prime Number
+250 is Not a Prime Number
+251 is a Prime Number
+252 is Not a Prime Number
+253 is Not a Prime Number
+254 is Not a Prime Number
+255 is Not a Prime Number
+256 is Not a Prime Number
+257 is a Prime Number
+258 is Not a Prime Number
+259 is Not a Prime Number
+260 is Not a Prime Number
+261 is Not a Prime Number
+262 is Not a Prime Number
+263 is a Prime Number
+264 is Not a Prime Number
+265 is Not a Prime Number
+266 is Not a Prime Number
+267 is Not a Prime Number
+268 is Not a Prime Number
+269 is a Prime Number
+270 is Not a Prime Number
+271 is a Prime Number
+272 is Not a Prime Number
+273 is Not a Prime Number
+274 is Not a Prime Number
+275 is Not a Prime Number
+276 is Not a Prime Number
+277 is a Prime Number
+278 is Not a Prime Number
+279 is Not a Prime Number
+280 is Not a Prime Number
+281 is a Prime Number
+282 is Not a Prime Number
+283 is a Prime Number
+284 is Not a Prime Number
+285 is Not a Prime Number
+286 is Not a Prime Number
+287 is Not a Prime Number
+288 is Not a Prime Number
+289 is Not a Prime Number
+290 is Not a Prime Number
+291 is Not a Prime Number
+292 is Not a Prime Number
+293 is a Prime Number
+294 is Not a Prime Number
+295 is Not a Prime Number
+296 is Not a Prime Number
+297 is Not a Prime Number
+298 is Not a Prime Number
+299 is Not a Prime Number
+300 is Not a Prime Number
+301 is Not a Prime Number
+302 is Not a Prime Number
+303 is Not a Prime Number
+304 is Not a Prime Number
+305 is Not a Prime Number
+306 is Not a Prime Number
+307 is a Prime Number
+308 is Not a Prime Number
+309 is Not a Prime Number
+310 is Not a Prime Number
+311 is a Prime Number
+312 is Not a Prime Number
+313 is a Prime Number
+314 is Not a Prime Number
+315 is Not a Prime Number
+316 is Not a Prime Number
+317 is a Prime Number
+318 is Not a Prime Number
+319 is Not a Prime Number
+320 is Not a Prime Number
+321 is Not a Prime Number
+322 is Not a Prime Number
+323 is Not a Prime Number
+324 is Not a Prime Number
+325 is Not a Prime Number
+326 is Not a Prime Number
+327 is Not a Prime Number
+328 is Not a Prime Number
+329 is Not a Prime Number
+330 is Not a Prime Number
+331 is a Prime Number
+332 is Not a Prime Number
+333 is Not a Prime Number
+334 is Not a Prime Number
+335 is Not a Prime Number
+336 is Not a Prime Number
+337 is a Prime Number
+338 is Not a Prime Number
+339 is Not a Prime Number
+340 is Not a Prime Number
+341 is Not a Prime Number
+342 is Not a Prime Number
+343 is Not a Prime Number
+344 is Not a Prime Number
+345 is Not a Prime Number
+346 is Not a Prime Number
+347 is a Prime Number
+348 is Not a Prime Number
+349 is a Prime Number
+350 is Not a Prime Number
+351 is Not a Prime Number
+352 is Not a Prime Number
+353 is a Prime Number
+354 is Not a Prime Number
+355 is Not a Prime Number
+356 is Not a Prime Number
+357 is Not a Prime Number
+358 is Not a Prime Number
+359 is a Prime Number
+360 is Not a Prime Number
+361 is Not a Prime Number
+362 is Not a Prime Number
+363 is Not a Prime Number
+364 is Not a Prime Number
+365 is Not a Prime Number
+366 is Not a Prime Number
+367 is a Prime Number
+368 is Not a Prime Number
+369 is Not a Prime Number
+370 is Not a Prime Number
+371 is Not a Prime Number
+372 is Not a Prime Number
+373 is a Prime Number
+374 is Not a Prime Number
+375 is Not a Prime Number
+376 is Not a Prime Number
+377 is Not a Prime Number
+378 is Not a Prime Number
+379 is a Prime Number
+380 is Not a Prime Number
+381 is Not a Prime Number
+382 is Not a Prime Number
+383 is a Prime Number
+384 is Not a Prime Number
+385 is Not a Prime Number
+386 is Not a Prime Number
+387 is Not a Prime Number
+388 is Not a Prime Number
+389 is a Prime Number
+390 is Not a Prime Number
+391 is Not a Prime Number
+392 is Not a Prime Number
+393 is Not a Prime Number
+394 is Not a Prime Number
+395 is Not a Prime Number
+396 is Not a Prime Number
+397 is a Prime Number
+398 is Not a Prime Number
+399 is Not a Prime Number
+400 is Not a Prime Number
+401 is a Prime Number
+402 is Not a Prime Number
+403 is Not a Prime Number
+404 is Not a Prime Number
+405 is Not a Prime Number
+406 is Not a Prime Number
+407 is Not a Prime Number
+408 is Not a Prime Number
+409 is a Prime Number
+410 is Not a Prime Number
+411 is Not a Prime Number
+412 is Not a Prime Number
+413 is Not a Prime Number
+414 is Not a Prime Number
+415 is Not a Prime Number
+416 is Not a Prime Number
+417 is Not a Prime Number
+418 is Not a Prime Number
+419 is a Prime Number
+420 is Not a Prime Number
+421 is a Prime Number
+422 is Not a Prime Number
+423 is Not a Prime Number
+424 is Not a Prime Number
+425 is Not a Prime Number
+426 is Not a Prime Number
+427 is Not a Prime Number
+428 is Not a Prime Number
+429 is Not a Prime Number
+430 is Not a Prime Number
+431 is a Prime Number
+432 is Not a Prime Number
+433 is a Prime Number
+434 is Not a Prime Number
+435 is Not a Prime Number
+436 is Not a Prime Number
+437 is Not a Prime Number
+438 is Not a Prime Number
+439 is a Prime Number
+440 is Not a Prime Number
+441 is Not a Prime Number
+442 is Not a Prime Number
+443 is a Prime Number
+444 is Not a Prime Number
+445 is Not a Prime Number
+446 is Not a Prime Number
+447 is Not a Prime Number
+448 is Not a Prime Number
+449 is a Prime Number
+450 is Not a Prime Number
+451 is Not a Prime Number
+452 is Not a Prime Number
+453 is Not a Prime Number
+454 is Not a Prime Number
+455 is Not a Prime Number
+456 is Not a Prime Number
+457 is a Prime Number
+458 is Not a Prime Number
+459 is Not a Prime Number
+460 is Not a Prime Number
+461 is a Prime Number
+462 is Not a Prime Number
+463 is a Prime Number
+464 is Not a Prime Number
+465 is Not a Prime Number
+466 is Not a Prime Number
+467 is a Prime Number
+468 is Not a Prime Number
+469 is Not a Prime Number
+470 is Not a Prime Number
+471 is Not a Prime Number
+472 is Not a Prime Number
+473 is Not a Prime Number
+474 is Not a Prime Number
+475 is Not a Prime Number
+476 is Not a Prime Number
+477 is Not a Prime Number
+478 is Not a Prime Number
+479 is a Prime Number
+480 is Not a Prime Number
+481 is Not a Prime Number
+482 is Not a Prime Number
+483 is Not a Prime Number
+484 is Not a Prime Number
+485 is Not a Prime Number
+486 is Not a Prime Number
+487 is a Prime Number
+488 is Not a Prime Number
+489 is Not a Prime Number
+490 is Not a Prime Number
+491 is a Prime Number
+492 is Not a Prime Number
+493 is Not a Prime Number
+494 is Not a Prime Number
+495 is Not a Prime Number
+496 is Not a Prime Number
+497 is Not a Prime Number
+498 is Not a Prime Number
+499 is a Prime Number
+500 is Not a Prime Number
+501 is Not a Prime Number
+502 is Not a Prime Number
+503 is a Prime Number
+504 is Not a Prime Number
+505 is Not a Prime Number
+506 is Not a Prime Number
+507 is Not a Prime Number
+508 is Not a Prime Number
+509 is a Prime Number
+510 is Not a Prime Number
+511 is Not a Prime Number
+512 is Not a Prime Number
+513 is Not a Prime Number
+514 is Not a Prime Number
+515 is Not a Prime Number
+516 is Not a Prime Number
+517 is Not a Prime Number
+518 is Not a Prime Number
+519 is Not a Prime Number
+520 is Not a Prime Number
+521 is a Prime Number
+522 is Not a Prime Number
+523 is a Prime Number
+524 is Not a Prime Number
+525 is Not a Prime Number
+526 is Not a Prime Number
+527 is Not a Prime Number
+528 is Not a Prime Number
+529 is Not a Prime Number
+530 is Not a Prime Number
+531 is Not a Prime Number
+532 is Not a Prime Number
+533 is Not a Prime Number
+534 is Not a Prime Number
+535 is Not a Prime Number
+536 is Not a Prime Number
+537 is Not a Prime Number
+538 is Not a Prime Number
+539 is Not a Prime Number
+540 is Not a Prime Number
+541 is a Prime Number
+542 is Not a Prime Number
+543 is Not a Prime Number
+544 is Not a Prime Number
+545 is Not a Prime Number
+546 is Not a Prime Number
+547 is a Prime Number
+548 is Not a Prime Number
+549 is Not a Prime Number
+550 is Not a Prime Number
+551 is Not a Prime Number
+552 is Not a Prime Number
+553 is Not a Prime Number
+554 is Not a Prime Number
+555 is Not a Prime Number
+556 is Not a Prime Number
+557 is a Prime Number
+558 is Not a Prime Number
+559 is Not a Prime Number
+560 is Not a Prime Number
+561 is Not a Prime Number
+562 is Not a Prime Number
+563 is a Prime Number
+564 is Not a Prime Number
+565 is Not a Prime Number
+566 is Not a Prime Number
+567 is Not a Prime Number
+568 is Not a Prime Number
+569 is a Prime Number
+570 is Not a Prime Number
+571 is a Prime Number
+572 is Not a Prime Number
+573 is Not a Prime Number
+574 is Not a Prime Number
+575 is Not a Prime Number
+576 is Not a Prime Number
+577 is a Prime Number
+578 is Not a Prime Number
+579 is Not a Prime Number
+580 is Not a Prime Number
+581 is Not a Prime Number
+582 is Not a Prime Number
+583 is Not a Prime Number
+584 is Not a Prime Number
+585 is Not a Prime Number
+586 is Not a Prime Number
+587 is a Prime Number
+588 is Not a Prime Number
+589 is Not a Prime Number
+590 is Not a Prime Number
+591 is Not a Prime Number
+592 is Not a Prime Number
+593 is a Prime Number
+594 is Not a Prime Number
+595 is Not a Prime Number
+596 is Not a Prime Number
+597 is Not a Prime Number
+598 is Not a Prime Number
+599 is a Prime Number
+600 is Not a Prime Number
+601 is a Prime Number
+602 is Not a Prime Number
+603 is Not a Prime Number
+604 is Not a Prime Number
+605 is Not a Prime Number
+606 is Not a Prime Number
+607 is a Prime Number
+608 is Not a Prime Number
+609 is Not a Prime Number
+610 is Not a Prime Number
+611 is Not a Prime Number
+612 is Not a Prime Number
+613 is a Prime Number
+614 is Not a Prime Number
+615 is Not a Prime Number
+616 is Not a Prime Number
+617 is a Prime Number
+618 is Not a Prime Number
+619 is a Prime Number
+620 is Not a Prime Number
+621 is Not a Prime Number
+622 is Not a Prime Number
+623 is Not a Prime Number
+624 is Not a Prime Number
+625 is Not a Prime Number
+626 is Not a Prime Number
+627 is Not a Prime Number
+628 is Not a Prime Number
+629 is Not a Prime Number
+630 is Not a Prime Number
+631 is a Prime Number
+632 is Not a Prime Number
+633 is Not a Prime Number
+634 is Not a Prime Number
+635 is Not a Prime Number
+636 is Not a Prime Number
+637 is Not a Prime Number
+638 is Not a Prime Number
+639 is Not a Prime Number
+640 is Not a Prime Number
+641 is a Prime Number
+642 is Not a Prime Number
+643 is a Prime Number
+644 is Not a Prime Number
+645 is Not a Prime Number
+646 is Not a Prime Number
+647 is a Prime Number
+648 is Not a Prime Number
+649 is Not a Prime Number
+650 is Not a Prime Number
+651 is Not a Prime Number
+652 is Not a Prime Number
+653 is a Prime Number
+654 is Not a Prime Number
+655 is Not a Prime Number
+656 is Not a Prime Number
+657 is Not a Prime Number
+658 is Not a Prime Number
+659 is a Prime Number
+660 is Not a Prime Number
+661 is a Prime Number
+662 is Not a Prime Number
+663 is Not a Prime Number
+664 is Not a Prime Number
+665 is Not a Prime Number
+666 is Not a Prime Number
+667 is Not a Prime Number
+668 is Not a Prime Number
+669 is Not a Prime Number
+670 is Not a Prime Number
+671 is Not a Prime Number
+672 is Not a Prime Number
+673 is a Prime Number
+674 is Not a Prime Number
+675 is Not a Prime Number
+676 is Not a Prime Number
+677 is a Prime Number
+678 is Not a Prime Number
+679 is Not a Prime Number
+680 is Not a Prime Number
+681 is Not a Prime Number
+682 is Not a Prime Number
+683 is a Prime Number
+684 is Not a Prime Number
+685 is Not a Prime Number
+686 is Not a Prime Number
+687 is Not a Prime Number
+688 is Not a Prime Number
+689 is Not a Prime Number
+690 is Not a Prime Number
+691 is a Prime Number
+692 is Not a Prime Number
+693 is Not a Prime Number
+694 is Not a Prime Number
+695 is Not a Prime Number
+696 is Not a Prime Number
+697 is Not a Prime Number
+698 is Not a Prime Number
+699 is Not a Prime Number
+700 is Not a Prime Number
+701 is a Prime Number
+702 is Not a Prime Number
+703 is Not a Prime Number
+704 is Not a Prime Number
+705 is Not a Prime Number
+706 is Not a Prime Number
+707 is Not a Prime Number
+708 is Not a Prime Number
+709 is a Prime Number
+710 is Not a Prime Number
+711 is Not a Prime Number
+712 is Not a Prime Number
+713 is Not a Prime Number
+714 is Not a Prime Number
+715 is Not a Prime Number
+716 is Not a Prime Number
+717 is Not a Prime Number
+718 is Not a Prime Number
+719 is a Prime Number
+720 is Not a Prime Number
+721 is Not a Prime Number
+722 is Not a Prime Number
+723 is Not a Prime Number
+724 is Not a Prime Number
+725 is Not a Prime Number
+726 is Not a Prime Number
+727 is a Prime Number
+728 is Not a Prime Number
+729 is Not a Prime Number
+730 is Not a Prime Number
+731 is Not a Prime Number
+732 is Not a Prime Number
+733 is a Prime Number
+734 is Not a Prime Number
+735 is Not a Prime Number
+736 is Not a Prime Number
+737 is Not a Prime Number
+738 is Not a Prime Number
+739 is a Prime Number
+740 is Not a Prime Number
+741 is Not a Prime Number
+742 is Not a Prime Number
+743 is a Prime Number
+744 is Not a Prime Number
+745 is Not a Prime Number
+746 is Not a Prime Number
+747 is Not a Prime Number
+748 is Not a Prime Number
+749 is Not a Prime Number
+750 is Not a Prime Number
+751 is a Prime Number
+752 is Not a Prime Number
+753 is Not a Prime Number
+754 is Not a Prime Number
+755 is Not a Prime Number
+756 is Not a Prime Number
+757 is a Prime Number
+758 is Not a Prime Number
+759 is Not a Prime Number
+760 is Not a Prime Number
+761 is a Prime Number
+762 is Not a Prime Number
+763 is Not a Prime Number
+764 is Not a Prime Number
+765 is Not a Prime Number
+766 is Not a Prime Number
+767 is Not a Prime Number
+768 is Not a Prime Number
+769 is a Prime Number
+770 is Not a Prime Number
+771 is Not a Prime Number
+772 is Not a Prime Number
+773 is a Prime Number
+774 is Not a Prime Number
+775 is Not a Prime Number
+776 is Not a Prime Number
+777 is Not a Prime Number
+778 is Not a Prime Number
+779 is Not a Prime Number
+780 is Not a Prime Number
+781 is Not a Prime Number
+782 is Not a Prime Number
+783 is Not a Prime Number
+784 is Not a Prime Number
+785 is Not a Prime Number
+786 is Not a Prime Number
+787 is a Prime Number
+788 is Not a Prime Number
+789 is Not a Prime Number
+790 is Not a Prime Number
+791 is Not a Prime Number
+792 is Not a Prime Number
+793 is Not a Prime Number
+794 is Not a Prime Number
+795 is Not a Prime Number
+796 is Not a Prime Number
+797 is a Prime Number
+798 is Not a Prime Number
+799 is Not a Prime Number
+800 is Not a Prime Number
+801 is Not a Prime Number
+802 is Not a Prime Number
+803 is Not a Prime Number
+804 is Not a Prime Number
+805 is Not a Prime Number
+806 is Not a Prime Number
+807 is Not a Prime Number
+808 is Not a Prime Number
+809 is a Prime Number
+810 is Not a Prime Number
+811 is a Prime Number
+812 is Not a Prime Number
+813 is Not a Prime Number
+814 is Not a Prime Number
+815 is Not a Prime Number
+816 is Not a Prime Number
+817 is Not a Prime Number
+818 is Not a Prime Number
+819 is Not a Prime Number
+820 is Not a Prime Number
+821 is a Prime Number
+822 is Not a Prime Number
+823 is a Prime Number
+824 is Not a Prime Number
+825 is Not a Prime Number
+826 is Not a Prime Number
+827 is a Prime Number
+828 is Not a Prime Number
+829 is a Prime Number
+830 is Not a Prime Number
+831 is Not a Prime Number
+832 is Not a Prime Number
+833 is Not a Prime Number
+834 is Not a Prime Number
+835 is Not a Prime Number
+836 is Not a Prime Number
+837 is Not a Prime Number
+838 is Not a Prime Number
+839 is a Prime Number
+840 is Not a Prime Number
+841 is Not a Prime Number
+842 is Not a Prime Number
+843 is Not a Prime Number
+844 is Not a Prime Number
+845 is Not a Prime Number
+846 is Not a Prime Number
+847 is Not a Prime Number
+848 is Not a Prime Number
+849 is Not a Prime Number
+850 is Not a Prime Number
+851 is Not a Prime Number
+852 is Not a Prime Number
+853 is a Prime Number
+854 is Not a Prime Number
+855 is Not a Prime Number
+856 is Not a Prime Number
+857 is a Prime Number
+858 is Not a Prime Number
+859 is a Prime Number
+860 is Not a Prime Number
+861 is Not a Prime Number
+862 is Not a Prime Number
+863 is a Prime Number
+864 is Not a Prime Number
+865 is Not a Prime Number
+866 is Not a Prime Number
+867 is Not a Prime Number
+868 is Not a Prime Number
+869 is Not a Prime Number
+870 is Not a Prime Number
+871 is Not a Prime Number
+872 is Not a Prime Number
+873 is Not a Prime Number
+874 is Not a Prime Number
+875 is Not a Prime Number
+876 is Not a Prime Number
+877 is a Prime Number
+878 is Not a Prime Number
+879 is Not a Prime Number
+880 is Not a Prime Number
+881 is a Prime Number
+882 is Not a Prime Number
+883 is a Prime Number
+884 is Not a Prime Number
+885 is Not a Prime Number
+886 is Not a Prime Number
+887 is a Prime Number
+888 is Not a Prime Number
+889 is Not a Prime Number
+890 is Not a Prime Number
+891 is Not a Prime Number
+892 is Not a Prime Number
+893 is Not a Prime Number
+894 is Not a Prime Number
+895 is Not a Prime Number
+896 is Not a Prime Number
+897 is Not a Prime Number
+898 is Not a Prime Number
+899 is Not a Prime Number
+900 is Not a Prime Number
+901 is Not a Prime Number
+902 is Not a Prime Number
+903 is Not a Prime Number
+904 is Not a Prime Number
+905 is Not a Prime Number
+906 is Not a Prime Number
+907 is a Prime Number
+908 is Not a Prime Number
+909 is Not a Prime Number
+910 is Not a Prime Number
+911 is a Prime Number
+912 is Not a Prime Number
+913 is Not a Prime Number
+914 is Not a Prime Number
+915 is Not a Prime Number
+916 is Not a Prime Number
+917 is Not a Prime Number
+918 is Not a Prime Number
+919 is a Prime Number
+920 is Not a Prime Number
+921 is Not a Prime Number
+922 is Not a Prime Number
+923 is Not a Prime Number
+924 is Not a Prime Number
+925 is Not a Prime Number
+926 is Not a Prime Number
+927 is Not a Prime Number
+928 is Not a Prime Number
+929 is a Prime Number
+930 is Not a Prime Number
+931 is Not a Prime Number
+932 is Not a Prime Number
+933 is Not a Prime Number
+934 is Not a Prime Number
+935 is Not a Prime Number
+936 is Not a Prime Number
+937 is a Prime Number
+938 is Not a Prime Number
+939 is Not a Prime Number
+940 is Not a Prime Number
+941 is a Prime Number
+942 is Not a Prime Number
+943 is Not a Prime Number
+944 is Not a Prime Number
+945 is Not a Prime Number
+946 is Not a Prime Number
+947 is a Prime Number
+948 is Not a Prime Number
+949 is Not a Prime Number
+950 is Not a Prime Number
+951 is Not a Prime Number
+952 is Not a Prime Number
+953 is a Prime Number
+954 is Not a Prime Number
+955 is Not a Prime Number
+956 is Not a Prime Number
+957 is Not a Prime Number
+958 is Not a Prime Number
+959 is Not a Prime Number
+960 is Not a Prime Number
+961 is Not a Prime Number
+962 is Not a Prime Number
+963 is Not a Prime Number
+964 is Not a Prime Number
+965 is Not a Prime Number
+966 is Not a Prime Number
+967 is a Prime Number
+968 is Not a Prime Number
+969 is Not a Prime Number
+970 is Not a Prime Number
+971 is a Prime Number
+972 is Not a Prime Number
+973 is Not a Prime Number
+974 is Not a Prime Number
+975 is Not a Prime Number
+976 is Not a Prime Number
+977 is a Prime Number
+978 is Not a Prime Number
+979 is Not a Prime Number
+980 is Not a Prime Number
+981 is Not a Prime Number
+982 is Not a Prime Number
+983 is a Prime Number
+984 is Not a Prime Number
+985 is Not a Prime Number
+986 is Not a Prime Number
+987 is Not a Prime Number
+988 is Not a Prime Number
+989 is Not a Prime Number
+990 is Not a Prime Number
+991 is a Prime Number
+992 is Not a Prime Number
+993 is Not a Prime Number
+994 is Not a Prime Number
+995 is Not a Prime Number
+996 is Not a Prime Number
+997 is a Prime Number
+998 is Not a Prime Number
+999 is Not a Prime Number
+1000 is Not a Prime Number
+
+JAVA PROGRAM:
+public class FiveTable {
+    public static void main(String[] args) {
+        System.out.println("Multiplication Table of 5:\n");
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("5 * " + i + " = " + (5 * i));
+        }
+    }
+}
+
+OUTPUT:
+Multiplication Table of 5:
+
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+
+}
