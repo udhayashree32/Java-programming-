@@ -1,0 +1,45 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter a string with names: ");
+        String original = sc.nextLine();
+
+       
+        System.out.print("Enter name to update: ");
+        String nameToUpdate = sc.nextLine();
+
+        System.out.print("Enter new name: ");
+        String newName = sc.nextLine();
+
+        
+        System.out.print("Enter name to delete: ");
+        String nameToDelete = sc.nextLine();
+
+        
+        String updated = original.replace(nameToUpdate, newName);
+
+        
+        updated = updated.replace(nameToDelete, "");
+
+       
+        updated = updated.replaceAll("\\s+", " ").trim();
+
+       
+        System.out.println("\nOriginal string: " + original);
+        System.out.println("Updated string : " + updated);
+    }
+}
+
+OUTPUT:
+Enter a string with names: meenu, renu,banu
+Enter name to update: meenu
+Enter new name: sonu
+Enter name to delete: renu
+
+Original string: meenu, renu,banu
+Updated string : sonu, ,banu
