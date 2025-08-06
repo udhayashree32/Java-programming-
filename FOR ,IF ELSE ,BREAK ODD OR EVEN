@@ -1,0 +1,38 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num;
+
+        for (;;) {  
+            System.out.print("Enter a number: ");
+            num = scanner.nextInt();
+
+            if (num == 0) {
+                break;  
+            }
+
+            if (num % 2 == 0) {
+                System.out.println(num + " is even.");
+            } else {
+                System.out.println(num + " is odd.");
+            }
+        }
+
+        System.out.println("Program exited.");
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a number: 4
+4 is even.
+Enter a number: 7
+7 is odd.
+Enter a number: 8
+8 is even.
+Enter a number: 0
+Program exited.
+
