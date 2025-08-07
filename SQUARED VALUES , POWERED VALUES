@@ -1,0 +1,71 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class BinaryPrinter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        System.out.println("Binary of " + num + " is: " + Integer.toBinaryString(num));
+
+        System.out.println("\nBinary values from 1 to " + num + ":");
+        for (int i = 1; i <= num; i++) {
+            System.out.println(i + " = " + Integer.toBinaryString(i));
+        }
+
+        sc.close();
+    }
+}
+OUTPUT:
+Enter how many square numbers you want: 4
+Square number series:
+1 4 9 16
+
+PROGRAM:
+cimport java.util.Scanner;
+
+
+
+public class PowerPattern {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+
+        System.out.print("Enter how many powers to display: ");
+
+        int n = input.nextInt();
+
+
+
+        for (int i = 1; i <= n; i++) {
+
+            int result = (int) Math.pow(2, i);
+
+            System.out.println("2^" + i + " = " + result);
+
+        }
+
+
+
+        input.close();
+
+    }
+
+}
+
+OUTPUT:
+Enter how many powers to display: 8
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+2^7 = 128
+2^8 = 256
+
