@@ -1,0 +1,27 @@
+PROGRAM:
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomNumberGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.print("Enter the starting number: ");
+        int start = scanner.nextInt();
+
+        System.out.print("Enter the ending number: ");
+        int end = scanner.nextInt();
+
+        int randomNumber = (int) Math.round(start + (random.nextDouble() * (end - start)));
+
+        System.out.println("Random Number: " + randomNumber);
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter the starting number: 15
+Enter the ending number: 25
+Random Number: 24
