@@ -1,0 +1,181 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class BusBooking {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter total number of seats: ");
+        int size = scanner.nextInt();
+        scanner.nextLine(); 
+        String[] seats = new String[size]; 
+
+        while (true) {
+            System.out.println("\nChoose an option:");
+            System.out.println("1. Add Passenger");
+            System.out.println("2. Update Passenger");
+            System.out.println("3. Delete Passenger");
+            System.out.println("4. Display Seats");
+            System.out.println("5. Exit");
+            int option = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
+            switch (option) {
+                case 1:
+                    System.out.print("Enter seat number (0 to " + (size-1) + "): ");
+                    int addIndex = scanner.nextInt();
+                    scanner.nextLine();
+                    if (addIndex >= 0 && addIndex < size && seats[addIndex] == null) {
+                        System.out.print("Enter passenger name: ");
+                        seats[addIndex] = scanner.nextLine();
+                        System.out.println("Passenger added.");
+                    } else {
+                        System.out.println("Invalid or already booked seat.");
+                    }
+                    break;
+
+                case 2: 
+                    System.out.print("Enter seat number to update: ");
+                    int updIndex = scanner.nextInt();
+                    scanner.nextLine();
+                    if (updIndex >= 0 && updIndex < size && seats[updIndex] != null) {
+                        System.out.print("Enter new passenger name: ");
+                        seats[updIndex] = scanner.nextLine();
+                        System.out.println("Passenger updated.");
+                    } else {
+                        System.out.println("Seat not booked.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter seat number to delete: ");
+                    int delIndex = scanner.nextInt();
+                    scanner.nextLine();
+                    if (delIndex >= 0 && delIndex < size && seats[delIndex] != null) {
+                        seats[delIndex] = null;
+                        System.out.println("Passenger removed.");
+                    } else {
+                        System.out.println("Seat not booked.");
+                    }
+                    break;
+
+                case 4: 
+                    System.out.println("Current Seat Status:");
+                    for (int i = 0; i < size; i++) {
+                        System.out.println("Seat " + i + ": " + (seats[i] != null ? seats[i] : "Empty"));
+                    }
+                    break;
+
+                case 5: 
+                    System.out.println("Exiting...");
+                    return;
+
+                default:
+                    System.out.println("Invalid option.");
+                    break;
+            }
+        }
+    }
+}
+
+OUTPUT:
+Enter total number of seats: 4
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+1
+Enter seat number (0 to 3): 0
+Enter passenger name: sathiya
+Passenger added.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+1
+Enter seat number (0 to 3): 1
+Enter passenger name: aathirai
+Passenger added.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+1
+Enter seat number (0 to 3): 2
+Enter passenger name: alamelu
+Passenger added.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+1
+Enter seat number (0 to 3): 3
+Enter passenger name: jothi
+Passenger added.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+2
+Enter seat number to update: 3
+Enter new passenger name: priyanaka
+Passenger updated.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+2
+Enter seat number to update: 1
+Enter new passenger name: shanamma
+Passenger updated.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+3
+Enter seat number to delete: 2
+Passenger removed.
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+4
+Current Seat Status:
+Seat 0: sathiya
+Seat 1: shanamma
+Seat 2: Empty
+Seat 3: priyanaka
+
+Choose an option:
+1. Add Passenger
+2. Update Passenger
+3. Delete Passenger
+4. Display Seats
+5. Exit
+5
+Exiting...
+
