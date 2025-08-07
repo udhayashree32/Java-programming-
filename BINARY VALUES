@@ -1,0 +1,32 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class BinaryPrinter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        System.out.println("Binary of " + num + " is: " + Integer.toBinaryString(num));
+
+        System.out.println("\nBinary values from 1 to " + num + ":");
+        for (int i = 1; i <= num; i++) {
+            System.out.println(i + " = " + Integer.toBinaryString(i));
+        }
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Enter a number: 6
+Binary of 6 is: 110
+
+Binary values from 1 to 6:
+1 = 1
+2 = 10
+3 = 11
+4 = 100
+5 = 101
+6 = 110
