@@ -1,0 +1,22 @@
+PROGRAM:
+public class CumulativeSum {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            sum += i;
+            System.out.println("Cumulative sum up to " + i + " = " + sum);
+        }
+    }
+}
+
+OUTPUT:
+Cumulative sum up to 1 = 1
+Cumulative sum up to 2 = 3
+Cumulative sum up to 3 = 6
+Cumulative sum up to 4 = 10
+Cumulative sum up to 5 = 15
+Cumulative sum up to 6 = 21
+Cumulative sum up to 7 = 28
+Cumulative sum up to 8 = 36
+Cumulative sum up to 9 = 45
+Cumulative sum up to 10 = 55
