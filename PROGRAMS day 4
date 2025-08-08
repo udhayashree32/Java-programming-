@@ -1,0 +1,207 @@
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Udhaya ");
+        mymethod("name");
+    }
+
+    public static void mymethod(String name) {
+    }
+}
+
+OUTPUT:
+Udhaya
+
+PROGRAM:
+public class Main {
+    public static void printSum(int x, int y) {
+        System.out.println("Sum: " + (x + y));
+    }
+
+    public static int calculateSum(int x, int y) {
+        return x + y;
+    }
+
+    public static void main(String[] args) {
+        printSum(5, 7);
+        int result = calculateSum(5, 8);
+        System.out.println("Sum: " + result);
+    }
+}
+
+OUTPUT:
+Sum: 12
+Sum: 13
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String fullName = getFullName("Udhaya", "Shree");
+        System.out.println("Full Name: " + fullName);
+    }
+
+    public static String getFullName(String firstName, String lastName) {
+        return firstName + " " + lastName;
+    }
+}
+
+OUTPUT:
+Full Name: Udhaya Shree
+
+PROGRAM:
+import java.util.Scanner;
+
+public class PersonInfo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your first name: ");
+        String firstName = scanner.next();
+
+        System.out.print("Enter your last name: ");
+        String lastName = scanner.next();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Enter your weight (in kg): ");
+        double weight = scanner.nextDouble();
+
+        System.out.println("\nYour Information:");
+        System.out.println("Name: " + firstName + " " + lastName);
+        System.out.println("Age: " + age);
+        System.out.println("Weight: " + weight + " kg");
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter your first name: Udhaya
+Enter your last name: Shree
+Enter your age: 20
+Enter your weight (in kg): 66
+
+Your Information:
+Name: Udhaya Shree
+Age: 20
+Weight: 66.0 kg
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the operator (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        switch (operator) {
+            case '+':
+                System.out.println("Result: " + (num1 + num2));
+                break;
+            case '-':
+                System.out.println("Result: " + (num1 - num2));
+                break;
+            case '/':
+                if (num2 != 0) {
+                    System.out.println("Result: " + (num1 / (double) num2));
+                } else {
+                    System.out.println("Error: Division by zero!");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator!");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter the first number: 9
+Enter the operator (+, -, *, /): /
+Enter the second number: 7
+Result: 1.2857142857142858
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Instagram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        String correctUsername = "udhaya";
+        String correctPassword = "16785";
+
+        
+        System.out.print("Enter your Instagram username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter your Instagram password: ");
+        String password = sc.nextLine();
+
+        
+        if (username.equals(correctUsername) && password.equals(correctPassword)) {
+            System.out.println("Login successful! Welcome to Instagram.");
+        } else {
+            System.out.println("Login failed! Incorrect username or password.");
+        }
+    }
+}
+
+OUTPUT:
+  Enter your Instagram username: udhaya
+Enter your Instagram password: 16785
+Login successful! Welcome to Instagram.
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Instagram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Step 1: User sets their username and password
+        System.out.print("Set your username: ");
+        String correctUsername = sc.nextLine();
+
+        System.out.print("Set your password: ");
+        String correctPassword = sc.nextLine();
+
+        System.out.println("\n--- Login Page ---");
+
+        // Step 2: User tries to log in
+        System.out.print("Enter username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter password: ");
+        String password = sc.nextLine();
+
+        // Step 3: Check if login details match
+        if (username.equals(correctUsername) && password.equals(correctPassword)) {
+            System.out.println("Login successful!");
+        } else {
+            System.out.println("Login failed. Incorrect username or password.");
+        }
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Set your username: udhaya
+Set your password: 888999
+
+--- Login Page ---
+Enter username: udhaya
+Enter password: 888999
+Login successful!
