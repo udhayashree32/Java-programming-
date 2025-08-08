@@ -1,0 +1,47 @@
+PROGRAM:
+import java.util.*;
+
+public class NumberSumCombinations {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
+
+        List<Integer> combination = new ArrayList<>();
+        System.out.println("Possible combinations to form " + number + " are:");
+        findCombinations(number, number, combination);
+    }
+
+    
+    static void findCombinations(int target, int max, List<Integer> combination) {
+        if (target == 0) {
+            System.out.println(combination);
+            return;
+        }
+
+        for (int i = Math.min(max, target); i >= 1; i--) {
+            combination.add(i);                       
+            findCombinations(target - i, i, combination); 
+            combination.remove(combination.size() - 1);   
+        }
+    }
+}
+
+OUTPUT:
+Enter a number: 6
+Possible combinations to form 6 are:
+[6]
+[5, 1]
+[4, 2]
+[4, 1, 1]
+[3, 3]
+[3, 2, 1]
+[3, 1, 1, 1]
+[2, 2, 2]
+[2, 2, 1, 1]
+[2, 1, 1, 1, 1]
+[1, 1, 1, 1, 1, 1]
+
+PROGRAM:
