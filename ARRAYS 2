@@ -1,0 +1,135 @@
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+       
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j < array.length; j++) {
+                int[] subarray = getSubarray(array, i, j);
+                System.out.println("Subarray from index " + i + " to " + j + ":");
+                printArray(subarray);
+            }
+        }
+    }
+
+    
+    public static int[] getSubarray(int[] array, int start, int end) {
+        int[] subarray = new int[end - start + 1];
+        System.arraycopy(array, start, subarray, 0, end - start + 1);
+        return subarray;
+    }
+
+   
+    public static void printArray(int[] array) {
+        for (int element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+}
+
+OUTPUT:
+Original Array:
+1 2 3 4 5 
+Subarray from index 0 to 0:
+1 
+Subarray from index 0 to 1:
+1 2 
+Subarray from index 0 to 2:
+1 2 3 
+Subarray from index 0 to 3:
+1 2 3 4 
+Subarray from index 0 to 4:
+1 2 3 4 5 
+Subarray from index 1 to 1:
+2 
+Subarray from index 1 to 2:
+2 3 
+Subarray from index 1 to 3:
+2 3 4 
+Subarray from index 1 to 4:
+2 3 4 5 
+Subarray from index 2 to 2:
+3 
+Subarray from index 2 to 3:
+3 4 
+Subarray from index 2 to 4:
+3 4 5 
+Subarray from index 3 to 3:
+4 
+Subarray from index 3 to 4:
+4 5 
+Subarray from index 4 to 4:
+5 
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        String mergedString = "";
+
+        for (int i = 0; i < array.length; i++) {
+            mergedString += array[i];
+            if (i < array.length - 1) {
+                mergedString += " "; 
+            }
+        }
+
+        System.out.println("Merged String: " + mergedString);
+    }
+}
+
+OUTPUT:
+Merged String: 1 2 3 4 5
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "10";
+        String str2 = "20";
+
+        
+        int sum = Integer.parseInt(str1) + Integer.parseInt(str2);
+
+        System.out.println("Sum: " + sum);
+    }
+
+OUTPUT:
+Sum: 30
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean continueInput = true;
+
+        while (continueInput) {
+            System.out.print("Enter something (or 'exit' to quit): ");
+            String userInput = scanner.nextLine();
+
+            if (userInput.equalsIgnoreCase("exit")) {
+                continueInput = false;
+            } else {
+                System.out.println("You entered: " + userInput);
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter something (or 'exit' to quit): 45
+You entered: 45
+Enter something (or 'exit' to quit): 89
+You entered: 89
+Enter something (or 'exit' to quit): quit
+You entered: quit
+Enter something (or 'exit' to quit): exit
+
