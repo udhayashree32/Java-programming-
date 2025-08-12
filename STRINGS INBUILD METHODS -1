@@ -1,0 +1,131 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Code points for each character in your name:");
+        for (int i = 0; i < name.length(); i++) {
+            int codePoint = name.codePointAt(i);
+            System.out.println("Character: " + name.charAt(i) + ", Code Point: " + codePoint);
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter your name: Udhaya
+Code points for each character in your name:
+Character: U, Code Point: 85
+Character: d, Code Point: 100
+Character: h, Code Point: 104
+Character: a, Code Point: 97
+Character: y, Code Point: 121
+Character: a, Code Point: 97
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        String input = scanner.next().trim();
+
+        if (input.length() == 1) {
+            char c = input.charAt(0);
+            int codePoint = input.codePointAt(0);
+            System.out.println("Character: " + c + ", Code Point: " + codePoint);
+        } else {
+            System.out.println("Please enter a single character.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a character: U
+Character: U, Code Point: 85
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str1 = scanner.nextLine();
+
+        System.out.print("Enter another string to compare: ");
+        String str2 = scanner.nextLine();
+
+       
+        if (str1.length() > 0) {
+            System.out.println("Code point at index 0 in '" + str1 + "': " + str1.codePointAt(0));
+        } else {
+            System.out.println("String is empty.");
+        }
+
+
+        System.out.println("Code point count in '" + str1 + "': " + str1.codePointCount(0, str1.length()));
+
+        
+        System.out.println("Compare '" + str1 + "' and '" + str2 + "' ignoring case: " + str1.compareToIgnoreCase(str2));
+
+       
+        if (str1.length() > 1) {
+            System.out.println("Code point before index 1 in '" + str1 + "': " + str1.codePointBefore(1));
+        } else {
+            System.out.println("String should have at least 2 characters for codePointBefore().");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: Udhayashree
+Enter another string to compare: Udhaya
+Code point at index 0 in 'Udhayashree': 85
+Code point count in 'Udhayashree': 11
+Compare 'Udhayashree' and 'Udhaya' ignoring case: 5
+Code point before index 1 in 'Udhayashree': 85
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String str1 = scanner.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String str2 = scanner.nextLine();
+
+       
+        String result = str1.concat(str2);
+        System.out.println("Concatenated string: " + result);
+
+        
+        String result2 = str1 + str2;
+        System.out.println("Concatenated string using + operator: " + result2);
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter the first string: Udhaya
+Enter the second string: shree
+Concatenated string: Udhayashree
+Concatenated string using + operator: Udhayashree
