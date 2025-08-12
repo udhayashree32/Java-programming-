@@ -1,0 +1,157 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the main string: ");
+        String mainStr = scanner.nextLine();
+
+        System.out.print("Enter a substring to check if it exists: ");
+        String subStr = scanner.nextLine();
+
+        
+        if (mainStr.contains(subStr)) {
+            System.out.println("The main string contains the substring.");
+        } else {
+            System.out.println("The main string does not contain the substring.");
+        }
+
+        System.out.print("Enter another string to compare content: ");
+        String compareStr = scanner.nextLine();
+
+       
+        if (mainStr.contentEquals(compareStr)) {
+            System.out.println("The two strings have the same content.");
+        } else {
+            System.out.println("The two strings do not have the same content.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter the main string: Udhaya
+Enter a substring to check if it exists: Udhaya
+The main string contains the substring.
+Enter another string to compare content: shree
+The two strings do not have the same content.
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        
+        System.out.print("Enter a suffix to check: ");
+        String suffix = scanner.nextLine();
+        if (str.endsWith(suffix)) {
+            System.out.println("The string ends with the suffix.");
+        } else {
+            System.out.println("The string does not end with the suffix.");
+        }
+
+       
+        System.out.print("Enter another string to compare: ");
+        String compareStr = scanner.nextLine();
+        if (str.equals(compareStr)) {
+            System.out.println("The two strings are equal.");
+        } else {
+            System.out.println("The two strings are not equal.");
+        }
+
+       
+        char[] charArray = str.toCharArray();
+        String copiedStr = String.copyValueOf(charArray);
+        System.out.println("Copied string: " + copiedStr);
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: udhaya
+Enter a suffix to check: ya
+The string ends with the suffix.
+Enter another string to compare: udhaya
+The two strings are equal.
+Copied string: udhaya
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        char[] charArray = {'S', 'a', 't', 'h', 'y', 'a'};
+
+        
+        String str = String.copyValueOf(charArray);
+        System.out.println("Copied string: " + str);
+
+        
+        System.out.println("Characters in the string:");
+        for (char c : charArray) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+
+       
+        String strPartial = String.copyValueOf(charArray, 1, 3);
+        System.out.println("Partial copied string: " + strPartial);
+
+        
+        char[] partialCharArray = strPartial.toCharArray();
+        System.out.println("Characters in the partial string:");
+        for (char c : partialCharArray) {
+            System.out.print(c + " ");
+        }
+    }
+}
+
+OUTPUT:
+Copied string: Sathya
+Characters in the string:
+S a t h y a
+Partial copied string: ath
+Characters in the partial string:
+a t h
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String str1 = scanner.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String str2 = scanner.nextLine();
+
+        if (str1.equalsIgnoreCase(str2)) {
+            System.out.println("The two strings are equal ignoring case.");
+        } else {
+            System.out.println("The two strings are not equal ignoring case.");
+        }
+
+       
+        String formattedStr = String.format("Hello, my name is %s and I am %d years old.", "Sathiya", 20);
+        System.out.println(formattedStr);
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter the first string: Udhaya
+Enter the second string: Udhaya
+The two strings are equal ignoring case.
+Hello, my name is Sathiya and I am 20 years old.
+
+
