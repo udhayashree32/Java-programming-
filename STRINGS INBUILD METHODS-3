@@ -1,0 +1,117 @@
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        
+        byte[] bytes = str.getBytes();
+        System.out.println("Bytes:");
+        for (byte b : bytes) {
+            System.out.print(b + " ");
+        }
+        System.out.println();
+
+        
+        System.out.print("Enter an index to get the character: ");
+        int index = scanner.nextInt();
+        if (index >= 0 && index < str.length()) {
+            char c = str.charAt(index);
+            System.out.println("Character at index " + index + ": " + c);
+        } else {
+            System.out.println("Index out of bounds.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: Udhaya
+Bytes:
+85 100 104 97 121 97 
+Enter an index to get the character: 3
+Character at index 3: a
+
+PROGRAM:
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7'};
+       
+        
+     String str="Udhaya";
+     str.getChars(0,6,a,4);
+     System.out.println(a);
+     System.out.println(str);
+     
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7'};
+       
+        
+     String str="Udhaya";
+     str.getChars(0,6,a,4);
+     System.out.println(a);
+     System.out.println(str);
+     
+    }
+}
+
+OUTPUT:
+9098Udhaya7
+Udhaya
+
+PROGRAM:
+import java.util.Scanner;
+import java.util.Arrays;
+public class GetBytesAndChar {
+    public static void main(String[] args) {
+        String name =("Udhaya");
+        byte[] arr = name.getBytes();
+        System.out.println(arr[0]);
+    }
+}
+
+OUTPUT:
+85
+
+PROGRAM:
+import java.util.Scanner;
+
+public class IndexOfExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter the main string: ");
+        String mainStr = sc.nextLine();
+
+        
+        System.out.print("Enter the substring to find: ");
+        String subStr = sc.nextLine();
+
+        
+        int index = mainStr.indexOf(subStr);
+
+        if (index != -1) {
+            System.out.println("Substring found at index: " + index);
+        } else {
+            System.out.println("Substring not found.");
+        }
+
+        sc.close();
+    }
+}
+
+OUTPUT:
+Enter the main string: udhaya
+Enter the substring to find: aya
+Substring found at index: 3
+
+
