@@ -1,0 +1,451 @@
+PROGRAM:
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello123";
+        String pattern = "\\d+"; 
+       
+        boolean matches = str.matches("." + pattern + "."); 
+        System.out.println("String matches pattern: " + matches);
+
+       
+        Pattern regex = Pattern.compile(pattern);
+        Matcher matcher = regex.matcher(str);
+        if (matcher.find()) {
+            System.out.println("Pattern found in string.");
+        } else {
+            System.out.println("Pattern not found in string.");
+        }
+
+     
+        String email = "example@example.com";
+        String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        if (email.matches(emailPattern)) {
+            System.out.println("Valid email.");
+        } else {
+            System.out.println("Invalid email.");
+        }
+    }
+}
+
+OUTPUT:
+String matches pattern: true
+Pattern found in string.
+Valid email.
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello, World! Hello again.";
+
+       
+        String replacedStr = str.replace("Hello", "Alamelu");
+        System.out.println("Replaced string: " + replacedStr);
+
+        
+        String replacedStrAll = str.replaceAll("Hello", "Sathya");
+        System.out.println("Replaced string using replaceAll(): " + replacedStrAll);
+
+        
+        String strWithDigits = "Hello123World456";
+        String replacedStrDigits = strWithDigits.replaceAll("\\d+", "");
+        System.out.println("Replaced string with digits removed: " + replacedStrDigits);
+    }
+}
+
+OUTPUT:
+Replaced string: Alamelu, World! Alamelu again.
+Replaced string using replaceAll(): Sathya, World! Sathya again.
+Replaced string with digits removed: HelloWorld
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "days,years,months,weeks,date";
+        String[] timeUnits = str.split(",");
+        System.out.println("Time Units:");
+        for (String unit : timeUnits) {
+            System.out.println(unit);
+        }
+
+        String[] timeUnitsLimited = str.split(",", 2);
+        System.out.println("Time Units with limit:");
+        for (String unit : timeUnitsLimited) {
+            System.out.println(unit);
+        }
+
+        String strWithSpaces = "days months weeks";
+        String[] timeUnitsWithSpaces = strWithSpaces.split("\\s+");
+        System.out.println("Time Units with spaces:");
+        for (String unit : timeUnitsWithSpaces) {
+            System.out.println(unit);
+        }
+    }
+}
+
+OUTPUT:
+Time Units:
+days
+years
+months
+weeks
+date
+Time Units with limit:
+days
+years,months,weeks,date
+Time Units with spaces:
+days
+months
+weeks
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        System.out.print("Enter a delimiter: ");
+        String delimiter = scanner.nextLine();
+
+        
+        String[] substrings = str.split(delimiter);
+        System.out.println("Substrings:");
+        for (String substring : substrings) {
+            System.out.println(substring);
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: Radha, Meera, Jasmine, Alamelu, Lala
+Enter a delimiter: ,
+Substrings:
+Radha
+Meera
+Jasmine
+Alamelu
+Lala
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+
+        
+        if (str.startsWith("Hello")) {
+            System.out.println("String starts with 'Hello'.");
+        } else {
+            System.out.println("String does not start with 'Hello'.");
+        }
+
+        
+        if (str.startsWith("World", 6)) {
+            System.out.println("String starts with 'World' at index 6.");
+        } else {
+            System.out.println("String does not start with 'World' at index 6.");
+        }
+    }
+}
+
+OUTPUT:
+String starts with 'Hello'.
+String starts with 'World' at index 6.
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string with two words separated by spaces: ");
+        String str = scanner.nextLine();
+
+       
+        String[] words = str.split("\\s+");
+
+        
+        if (words.length == 2) {
+            System.out.println("First word: " + words[0]);
+            System.out.println("Second word: " + words[1]);
+        } else {
+            System.out.println("Please enter exactly two words separated by spaces.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string with two words separated by spaces: Seetha Lakshmi
+First word: Seetha
+Second word: Lakshmi
+
+PROGRAM:
+import java.util.Scanner;
+public class EmailInput {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your email ID: ");
+        String email = sc.nextLine();
+        System.out.println("Your email ID is: " + email);
+    }
+}
+
+OUTPUT:
+Enter your email ID: u34567@gmail.com
+Your email ID is: u34567@gmail.com
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "abcde";
+        String subsequence = "ace";
+
+        if (isSubsequence(str, subsequence)) {
+            System.out.println(subsequence + " is a subsequence of " + str);
+        } else {
+            System.out.println(subsequence + " is not a subsequence of " + str);
+        }
+    }
+
+    public static boolean isSubsequence(String str, String subsequence) {
+        int strIndex = 0;
+        int subsequenceIndex = 0;
+
+        while (strIndex < str.length() && subsequenceIndex < subsequence.length()) {
+            if (str.charAt(strIndex) == subsequence.charAt(subsequenceIndex)) {
+                subsequenceIndex++;
+            }
+            strIndex++;
+        }
+
+        return subsequenceIndex == subsequence.length();
+    }
+}
+
+OUTPUT:
+ace is a subsequence of abcde
+
+PROGRAM:
+public class SubSequenceDemo {
+    public static void main(String[] args) {
+        String text = "udhaya";
+        CharSequence sub = text.subSequence(0, 4);
+        System.out.println("Subsequence: " + sub);
+        CharSequence sub2 = text.subSequence(4, text.length());
+        System.out.println("Subsequence: " + sub2);
+    }
+}
+
+OUTPUT:
+Subsequence: udha
+Subsequence: ya
+
+PROGRAM:
+public class SubstringDemo {
+    public static void main(String[] args) {
+        String text = "Alamelu";
+        String sub1 = text.substring(3);
+        System.out.println("Substring from index 3: " + sub1);
+        String sub2 = text.substring(0, 6);
+        System.out.println("Substring from 0 to 6: " + sub2);
+    }
+}
+
+OUTPUT:
+Substring from index 4: aya
+Substring from 0 to 4: udhaya
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello Sathiya";
+
+       
+        char[] charArray = str.toCharArray();
+
+        System.out.println("Character array:");
+        for (char c : charArray) {
+            System.out.print(c + " ");
+        }
+    }
+}
+
+OUTPUT:
+Character array:
+H e l l o   S a t h i y a 
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        System.out.println("Original string: " + str);
+
+      
+        System.out.print("Enter a delimiter: ");
+        String delimiter = scanner.nextLine();
+        String[] substrings = str.split(delimiter);
+        System.out.println("Substrings:");
+        for (String substring : substrings) {
+            System.out.println(substring);
+        }
+
+       
+        System.out.print("Enter a prefix: ");
+        String prefix = scanner.nextLine();
+        if (str.startsWith(prefix)) {
+            System.out.println("String starts with '" + prefix + "'.");
+        } else {
+            System.out.println("String does not start with '" + prefix + "'.");
+        }
+
+        
+        char[] charArray = str.toCharArray();
+        System.out.println("Character array:");
+        for (char c : charArray) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+
+       
+        System.out.println("Lowercase string: " + str.toLowerCase());
+        System.out.println("Uppercase string: " + str.toUpperCase());
+
+      
+        System.out.println("toString() string: " + str.toString());
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: Hello World To See You
+Original string: Hello World To See You
+Enter a delimiter: To
+Substrings:
+Hello World 
+ See You
+Enter a prefix: lo
+String does not start with 'lo'.
+Character array:
+H e l l o   W o r l d   T o   S e e   Y o u 
+Lowercase string: hello world to see you
+Uppercase string: HELLO WORLD TO SEE YOU
+toString() string: Hello World To See You
+
+PROGRAM:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        System.out.println("Original string: " + str);
+        System.out.println("Trimmed string: " + str.trim());
+
+       
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        scanner.nextLine(); 
+        System.out.println("String value of number: " + String.valueOf(num));
+
+        System.out.print("Enter a boolean value (true/false): ");
+        boolean bool = scanner.nextBoolean();
+        scanner.nextLine(); 
+        System.out.println("Boolean value: " + bool);
+
+       
+        System.out.println("Lowercase string: " + str.toLowerCase());
+        System.out.println("Uppercase string: " + str.toUpperCase());
+
+       
+        System.out.print("Enter a delimiter: ");
+        String delimiter = scanner.nextLine();
+        String[] substrings = str.split(delimiter);
+        System.out.println("Substrings:");
+        for (String substring : substrings) {
+            System.out.println(substring);
+        }
+
+       
+        System.out.print("Enter a prefix: ");
+        String prefix = scanner.nextLine();
+        if (str.startsWith(prefix)) {
+            System.out.println("String starts with '" + prefix + "'.");
+        } else {
+            System.out.println("String does not start with '" + prefix + "'.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string: Sathiya is my world. she is my mother.
+Original string: Sathiya is my world. she is my mother.
+Trimmed string: Sathiya is my world. she is my mother.
+Enter a number: 
+5
+String value of number: 5
+Enter a boolean value (true/false): true
+Boolean value: true
+Lowercase string: sathiya is my world. she is my mother.
+Uppercase string: SATHIYA IS MY WORLD. SHE IS MY MOTHER.
+Enter a delimiter: my
+Substrings:
+Sathiya is 
+ world. she is 
+ mother.
+Enter a prefix: er
+String does not start with 'er'.
+
+PROGRAM:
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello";
+        int num = 10;
+        boolean bool = true;
+
+        System.out.println(str.getClass().getName()); 
+
+        
+        Integer numObj = num;
+        Boolean boolObj = bool;
+
+        System.out.println(numObj.getClass().getName());
+        System.out.println(boolObj.getClass().getName()); 
+
+       
+        System.out.println(str instanceof String);
+        System.out.println(numObj instanceof Integer); 
+        System.out.println(boolObj instanceof Boolean); \
+    }
+}
+
+OUTPUT:
+java.lang.String
+java.lang.Integer
+java.lang.Boolean
+true
+true
+true
+
