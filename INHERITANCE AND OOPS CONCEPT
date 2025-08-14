@@ -1,0 +1,173 @@
+PROGRAM:
+class Cars {
+    void sound() {
+        System.out.println("Cars makes a sound");
+    }
+}
+
+class BMW extends Cars {
+    void sound() {
+        System.out.println("BMW");
+    }
+}
+
+class Audi extends Cars {
+    void sound() {
+        System.out.println("Audi");
+    }
+}
+
+class Benz extends Cars {
+    void sound() {
+        System.out.println("Benz");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cars a;
+
+        a = new BMW();
+        a.sound();
+
+        a = new Audi();
+        a.sound();
+
+        a = new Benz();
+        a.sound();
+    }
+}
+
+OUTPUT:
+BMW
+Audi
+Benz
+
+PROGRAM:
+import java.util.Scanner;
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter animal type (Dog/Other): ");
+        String type = sc.nextLine();
+        if (type.equalsIgnoreCase("Dog")) {
+            Dog d = new Dog();
+            d.bark(); 
+            d.eat();  
+        } else {
+            Animal a = new Animal();
+            a.eat(); 
+        }
+    }
+}
+
+OUTPUT:
+Dog is barking...
+Animal is eating...
+
+PROGRAM:
+class Vehicle {
+    void vehical() {
+        System.out.println("This is a Vehicle");
+    }
+}
+class FourWheeler extends Vehicle {
+    FourWheeler() {
+        System.out.println("This is a FourWheeler");
+    }
+}
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+        }
+}
+
+OUTPUT:
+This is a FourWheeler
+This is a Car
+
+PROGRAM:
+class Vehicle {
+    Vehicle() {
+        System.out.println("This is a Vehicle");
+    }
+}
+class FourWheeler extends Vehicle {
+    FourWheeler() {
+        System.out.println("This is a FourWheeler");
+    }
+}
+class Car extends Vehicle {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+class Bus extends Vehicle {
+    Bus() {
+        System.out.println("This is a Bus");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       FourWheeler fw = new FourWheeler();
+        Car c = new Car();
+        Bus b = new Bus();
+    }
+}
+
+OUTPUT:
+This is a Vehicle
+This is a FourWheeler
+This is a Vehicle
+This is a Car
+This is a Vehicle
+This is a Bus
+
+PROGRAM:
+interface Audi {
+    default void modelofAudi() {
+        System.out.println("This is a model of Audi");
+    }
+}
+
+
+interface BMW {
+    default void modelofBmw() {
+        System.out.println("This is a model of BMW");
+    }
+}
+
+
+class Car implements Audi, BMW {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+        obj.modelofAudi();
+        obj.modelofBmw();
+    }
+}
+OUTPUT:
+This is a Car
+This is a model of Audi
+This is a model of BMW
