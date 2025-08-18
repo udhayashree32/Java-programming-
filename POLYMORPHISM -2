@@ -1,0 +1,57 @@
+PROGRAM:
+class Payment {
+    public void mode() {
+        System.out.println("Payment");
+    }
+}
+
+
+class UPI extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("UPI");
+    }
+}
+
+
+class Credit extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("Credit");
+    }
+}
+
+
+class BankTransfer extends Payment {
+    @Override
+    public void mode() {
+        System.out.println("Bank Transfer");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment payment;
+
+        payment = new UPI();
+        payment.mode();
+
+        payment = new Credit();
+        payment.mode();
+
+        payment = new BankTransfer();
+        payment.mode();
+
+        payment = new Payment();
+        payment.mode();
+    }
+}
+
+OUTPUT:
+UPI
+Credit
+Bank Transfer
+Payment
+
+
+
